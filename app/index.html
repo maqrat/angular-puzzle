@@ -22,12 +22,12 @@
   <![endif]-->
 
 
-      <ul>
+<!--      <ul>
           <li ng-repeat="phone in phones">
               <span>{{phone.name}}</span>
               <p>{{phone.snippet}}</p>
           </li>
-      </ul>
+      </ul>-->
 
   <p>Total number of phones: {{phones.length}}</p>
   <p>Hello, {{name}}!</p>
@@ -41,6 +41,13 @@
       <tr><th>Row number</th></tr>
       <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td ng-repeat="j in [0, 1, 2, 3, 4, 5, 6, 7]">{{i+1}}</td></tr>
   </table>
+  <greet-user></greet-user>
+
+  <!-- Use a custom component to render a list of phones -->
+  <phone-list></phone-list>
+  <phone-list></phone-list>
+  <phone-list></phone-list>
+  <phone-list></phone-list>
     
 
   <!-- In production use:
@@ -48,7 +55,9 @@
   -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  
+  <script src="app.module.js"></script>
+  <script src="components/greet-user.js"></script>
+  <script src="phone-list/phone-list.module.js"></script>
+  <script src="phone-list/phone-list.component.js"></script>
 </body>
 </html>
