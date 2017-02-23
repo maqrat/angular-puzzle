@@ -3,14 +3,15 @@
         <div class="col-md-2">
             <!--Sidebar content-->
 
-            Search: <input ng-model="$ctrl.query" />
+            Search: <input ng-model="$ctrl.name" />
+            <p>{{$ctrl.name}}</p>
 
         </div>
         <div class="col-md-10">
             <!--Body content-->
 
             <ul class="phones">
-                <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+                <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.name">
                     <span>{{phone.name}}</span>
                     <p>{{phone.snippet}}</p>
                 </li>
