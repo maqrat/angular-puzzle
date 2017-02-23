@@ -1,22 +1,10 @@
-// // Define the `phonecatApp` module
-// angular.module('phonecatApp', [
-//     // ...which depends on the `phoneList` module
-//     'phoneList'
-// ])
-//
-// .controller('PhoneListController', function PhoneListController($scope) {
-//     $scope.phones = [
-//         {
-//             name: 'Nexus S',
-//             snippet: 'Fast just got faster with Nexus S.'
-//         }, {
-//             name: 'Motorola XOOM™ with Wi-Fi',
-//             snippet: 'The Next, Next Generation tablet.'
-//         }, {
-//             name: 'MOTOROLA XOOM™',
-//             snippet: 'The Next, Next Generation tablet.'
-//         }
-//     ];
-//     $scope.name = 'world';
-// });
+// Define the `phonecatApp` module
+//var phonecatApp = angular.module('phonecatApp', []);
+
+// Define the `phonecatApp` module
+angular.module('phonecatApp', [
+  // ...which depends on the `phoneList` module
+  'phoneList'
+]);
+
 
