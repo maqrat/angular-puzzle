@@ -1,0 +1,74 @@
+<img ng-src="{{ $ctrl.phone.images[0] }}" class="phone" />
+
+<h1>{{ $ctrl.phone.name }}</h1>
+
+<p>{{$ctrl.phone.description}}</p>
+
+<ul class="phone-thumbs">
+    <li ng-repeat="img in $ctrl.phone.images">
+        <img ng-src="{{img}}" />
+    </li>
+</ul>
+
+<ul class="specs">
+
+    <li>
+        <span>Additional Features</span>
+        <dd>{{$ctrl.phone.additionalFeatures}}</dd>
+    </li>
+
+    <li>
+        <span>Android</span>
+        <dl>
+            <dt>OS version</dt>
+            <dd>{{$ctrl.phone.android.os}}</dd>
+            <dt>UI</dt>
+            <dd>{{$ctrl.phone.android.ui}}</dd>
+        </dl>
+    </li>
+
+    <li>
+        <span>Availability and Networks</span>
+        <dl>
+            <dt>Availability</dt>
+            <dd ng-repeat="availability in $ctrl.phone.availability">{{availability}}</dd>
+        </dl>
+    </li>
+
+
+    <li>
+        <span>Battery</span>
+        <dl>
+            <dt>standbyTime</dt>
+            <dd>{{ $ctrl.phone.battery.standbyTime }}</dd>
+            <dt>talkTime</dt>
+            <dd>{{ $ctrl.phone.battery.talkTime }}</dd>
+            <dt>type</dt>
+            <dd>{{ $ctrl.phone.battery.type }}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Camera</span>
+        <dl>
+            <dt>Features</dt>
+            <dd ng-repeat="feature in $ctrl.phone.camera.features">{{feature}}</dd>
+            <dt>primary</dt>
+            <dd>{{$ctrl.phone.camera.primary}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>connectivity</span>
+        <dl>
+            <dt>bluetooth</dt>
+            <dd>{{$ctrl.phone.connectivity.bluetooth}}</dd>
+            <dt>cell</dt>
+            <dd>{{$ctrl.phone.connectivity.cell}}</dd>
+            <dt>gps</dt>
+            <dd>{{$ctrl.phone.connectivity.gps}}</dd>
+            <dt>infrared</dt>
+            <dd>{{$ctrl.phone.connectivity.infrared}}</dd>
+            <dt>wifi</dt>
+            <dd>{{$ctrl.phone.connectivity.wifi}}</dd>
+        </dl>
+    </li>
+</ul>

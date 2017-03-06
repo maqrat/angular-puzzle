@@ -20,7 +20,6 @@ component('phoneList', {
     // ];
     // this.orderProp = 'age';
     // },
-
     controller: ['$http',
         function PhoneListController($http) {
             var self = this;
