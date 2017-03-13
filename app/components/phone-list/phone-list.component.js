@@ -20,17 +20,26 @@ component('phoneList', {
     // ];
     // this.orderProp = 'age';
     // },
-    controller: ['$http',
-        function PhoneListController($http) {
-            var self = this;
-            self.orderProp = 'age';
+    // controller: ['$http',
+    //     function PhoneListController($http) {
+    //         var self = this;
+    //         self.orderProp = 'age';
+    //
+    //         $http.get('phones/phones.json').then(function(response) {
+    //             self.phones = response.data.slice(0, 5);
+    //         });
+    //     }
+    // ]
 
-            $http.get('phones/phones.json').then(function(response) {
-                self.phones = response.data.slice(0, 5);
-            });
+    controller: ['Phone',
+        function PhoneListController(Phone) {
+            this.phones = Phone.query();
+            this.orderProp = 'age';
         }
     ]
+
 });
+
 
 // angular.
 // module('phoneList').
