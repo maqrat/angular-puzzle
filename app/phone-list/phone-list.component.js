@@ -1,7 +1,7 @@
 angular.
 module('phoneList').
 component('phoneList', {
-  templateUrl: 'components/phone-list/phone-list.template.html',
+  templateUrl: 'phone-list/phone-list.template.html',
   //controller: function PhoneListController() {
     // this.phones = [
     //     {
@@ -33,7 +33,7 @@ component('phoneList', {
 
     controller: ['Phone',
         function PhoneListController(Phone) {
-            this.phones = Phone.query();
+            this.phones = Phone.query(); // здесь ведь у нас приходит список телефонов без деталей...
             this.orderProp = 'age';
         }
     ]

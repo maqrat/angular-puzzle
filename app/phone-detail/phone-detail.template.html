@@ -1,4 +1,12 @@
-<img ng-src="{{ $ctrl.mainImageUrl }}" class="phone" />
+<!--<img ng-src="{{ $ctrl.mainImageUrl }}" class="phone" />-->
+
+<div class="phone-images">
+    <img ng-src="{{img}}" class="phone"
+         ng-class="{selected: img === $ctrl.mainImageUrl}"
+         ng-repeat="img in $ctrl.phone.images" />
+</div>
+
+<p>{{ $ctrl.mainImageUrl}}</p>
 
 <h1>{{ $ctrl.phone.name }}</h1>
 
@@ -6,6 +14,7 @@
 
 <ul class="phone-thumbs">
     <li ng-repeat="img in $ctrl.phone.images">
+        <!--здесь запускается ф-я onDblclick(img)?-->
         <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" ng-dblclick="$ctrl.onDblclick(img)" />
     </li>
 </ul>

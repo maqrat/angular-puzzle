@@ -6,8 +6,9 @@ angular.module('phonecatApp', [
   // ...which depends on the `phoneList` module
   // 'ui.bootstrap',
     'core',
-  'phoneList',
+    'ngAnimate',
     'ngRoute',
+    'phoneList',
     'phoneDetail'
 ]);
 

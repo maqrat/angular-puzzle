@@ -1,7 +1,7 @@
 angular.
 module('phoneDetail').
 component('phoneDetail', {
-    templateUrl: 'components/phone-detail/phone-detail.template.html',
+    templateUrl: 'phone-detail/phone-detail.template.html',
     // controller: ['$routeParams', '$http',
     //     function PhoneDetailController($routeParams, $http) {
     //         var self = this;
@@ -22,7 +22,7 @@ component('phoneDetail', {
     //     }
     // ]
 
-    controller: ['$routeParams', 'Phone',
+    controller: ['$routeParams', 'Phone', // как передается здесь phoneId в $routeParams? и сюда все таки передаются детали телефона
         function PhoneDetailController($routeParams, Phone) {
             var self = this;
 
@@ -30,11 +30,11 @@ component('phoneDetail', {
                 alert('You double-clicked image: ' + imageUrl);
             };
 
-            self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+            self.phone = Phone.get({phoneId: $routeParams.phoneId}, function (phone) {
                 self.setImage(phone.images[0]);
             });
 
-            self.setImage = function setImage(imageUrl) {
+            self.setImage = function setImage(imageUrl) { // это переменная {{setImage}}? или функция..?
                 self.mainImageUrl = imageUrl;
             };
         }
